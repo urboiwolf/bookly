@@ -7,7 +7,9 @@ class SplashScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Image.asset(AppAssets.logo)],
+      children: [
+        Image.asset(AppAssets.logo),
+      ],
     );
   }
 }

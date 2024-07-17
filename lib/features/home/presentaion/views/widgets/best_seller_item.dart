@@ -45,7 +45,6 @@ class BestSellerItem extends StatelessWidget {
                       style: Styles.textStyle20
                           .copyWith(fontWeight: FontWeight.bold)),
                   const Spacer(),
-                  const Icon(Icons.star, color: Colors.yellow, size: 20),
                   const SizedBox(width: 5),
                   const BookRating(),
                 ],

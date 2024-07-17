@@ -1,15 +1,15 @@
 import 'package:bookly_app/features/home/presentaion/views/widgets/listview_item_book.dart';
 import 'package:flutter/material.dart';
 
-class ListViewHeader extends StatelessWidget {
-  const ListViewHeader({super.key});
+class SimilarBooksListView extends StatelessWidget {
+  const SimilarBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
+      height: MediaQuery.of(context).size.height * .15,
       child: ListView.builder(
-          itemCount: 5,
+          itemCount: 10,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return const Padding(

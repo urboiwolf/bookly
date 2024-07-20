@@ -9,16 +9,16 @@ sealed class NewestState extends Equatable {
 
 final class NewestInitial extends NewestState {}
 
-final class HomeCubitInitial extends NewestState {}
+final class NewsCubitInitial extends NewestState {}
 
-final class HomeCubitLoading extends NewestState {}
+final class NewsCubitLoading extends NewestState {}
 
-final class HomeCubitSuccess extends NewestState {
+final class NewsCubitSuccess extends NewestState {
   final List<BookModels> books;
-  const HomeCubitSuccess(this.books);
+  const NewsCubitSuccess(this.books);
 }
 
-final class HomeCubitError extends NewestState {
+final class NewsCubitError extends NewestState {
   final String error;
-  const HomeCubitError(this.error);
+  const NewsCubitError(this.error);
 }

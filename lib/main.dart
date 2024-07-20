@@ -1,8 +1,10 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/utlis/di.dart';
 import 'package:bookly_app/core/utlis/routers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  gitinit();
   runApp(const MyApp());
 }
 

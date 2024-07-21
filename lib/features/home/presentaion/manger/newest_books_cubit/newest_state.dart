@@ -9,8 +9,6 @@ sealed class NewestState extends Equatable {
 
 final class NewestInitial extends NewestState {}
 
-final class NewsCubitInitial extends NewestState {}
-
 final class NewsCubitLoading extends NewestState {}
 
 final class NewsCubitSuccess extends NewestState {

@@ -6,10 +6,14 @@ class ListViewItemBook extends StatelessWidget {
   final String imageurl;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-        aspectRatio: 2.6 / 4,
-        child: CachedNetworkImage(
-            imageUrl: imageurl,
-            errorWidget: (context, url, error) => const Icon(Icons.error)));
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15),
+      child: AspectRatio(
+          aspectRatio: 2.5 / 4,
+          child: CachedNetworkImage(
+              imageUrl: imageurl,
+              fit: BoxFit.fill,
+              errorWidget: (context, url, error) => const Icon(Icons.error))),
+    );
   }
 }

@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
               HomeCubit(gitIt.get<HomeRepoImpl>())..fetchFeaturedBooks(),
         ),
         BlocProvider(
-          create: (context) => NewestCubit(gitIt.get<HomeRepoImpl>()),
+          create: (context) =>
+              NewestCubit(gitIt.get<HomeRepoImpl>())..fetchNewsBooks(),
         ),
       ],
       child: MaterialApp.router(

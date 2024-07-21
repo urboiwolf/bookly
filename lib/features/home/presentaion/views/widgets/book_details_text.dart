@@ -15,7 +15,10 @@ class BookDetailsText extends StatelessWidget {
             style: Styles.textStyle18
                 .copyWith(fontWeight: FontWeight.w400, color: Colors.grey)),
         const SizedBox(height: 10),
-        const BookRating()
+        const BookRating(
+          count: 5,
+          rating: 4,
+        )
       ],
     );
   }

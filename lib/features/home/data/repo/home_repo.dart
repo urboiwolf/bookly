@@ -6,4 +6,5 @@ import '../../../../core/errors/errors.dart';
 abstract class HomeRepo {
   Future<Either<Failure, List<BookModels>>> fetchNewsBooks();
   Future<Either<Failure, List<BookModels>>> fetchFeaturedBooks();
+  Future<Either<Failure, List<BookModels>>> fetchSimilarBooks();
 }

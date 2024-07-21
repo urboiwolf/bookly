@@ -1,6 +1,7 @@
 import 'package:bookly_app/core/utlis/routers.dart';
 import 'package:bookly_app/core/utlis/styles.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/best_seller_item.dart';
+import 'package:bookly_app/features/home/presentaion/views/widgets/best_seller_listview.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/custom_appbar.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/listview_header.dart';
 import 'package:flutter/material.dart';
@@ -40,29 +41,6 @@ class HomeBody extends StatelessWidget {
           child: BestSellerListView(),
         )),
       ],
-    );
-  }
-}
-
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        GoRouter.of(context).go(Routers.bookDetails);
-      },
-      child: ListView.builder(
-          padding: EdgeInsets.zero,
-          itemCount: 10,
-          physics: const NeverScrollableScrollPhysics(),
-          itemBuilder: (context, index) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: BestSellerItem(),
-            );
-          }),
     );
   }
 }

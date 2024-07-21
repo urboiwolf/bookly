@@ -23,8 +23,9 @@ class ListViewHeader extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListViewItemBook(
-                      imageurl: state
-                          .books[index].volumeInfo.imageLinks.smallThumbnail,
+                      imageurl: state.books[index].volumeInfo.imageLinks
+                              ?.smallThumbnail ??
+                          '',
                     ),
                   );
                 }),

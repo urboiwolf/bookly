@@ -1,5 +1,5 @@
-import 'package:bookly_app/core/utlis/my_assets.dart';
-import 'package:flutter/widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 
 class ListViewItemBook extends StatelessWidget {
   const ListViewItemBook({super.key, required this.imageurl});
@@ -7,16 +7,9 @@ class ListViewItemBook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.6 / 4,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          image: DecorationImage(
-            image: NetworkImage(imageurl),
-            fit: BoxFit.fill,
-          ),
-        ),
-      ),
-    );
+        aspectRatio: 2.6 / 4,
+        child: CachedNetworkImage(
+            imageUrl: imageurl,
+            errorWidget: (context, url, error) => const Icon(Icons.error)));
   }
 }

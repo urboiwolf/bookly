@@ -1,11 +1,8 @@
-import 'package:bookly_app/core/utlis/routers.dart';
 import 'package:bookly_app/core/utlis/styles.dart';
-import 'package:bookly_app/features/home/presentaion/views/widgets/best_seller_item.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/best_seller_listview.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/custom_appbar.dart';
 import 'package:bookly_app/features/home/presentaion/views/widgets/listview_header.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});

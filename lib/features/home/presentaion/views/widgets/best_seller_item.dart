@@ -8,12 +8,12 @@ import 'package:go_router/go_router.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key, required this.bookModels});
-  final BookModels bookModels;
+  final BooksModel bookModels;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).go(Routers.bookDetails);
+        GoRouter.of(context).go(Routers.bookDetails, extra: bookModels);
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,

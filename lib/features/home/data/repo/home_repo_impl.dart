@@ -10,16 +10,16 @@ class HomeRepoImpl implements HomeRepo {
 
   HomeRepoImpl({required this.apiService});
   @override
-  Future<Either<Failure, List<BookModels>>> fetchNewsBooks() async {
+  Future<Either<Failure, List<BooksModel>>> fetchNewsBooks() async {
     try {
       var data = await apiService.get(
           endPoint:
               'volumes?Filtering=free-ebooks&q=computer science&&sorting=newest');
 
-      List<BookModels> books = [];
+      List<BooksModel> books = [];
 
       for (var item in data['items']) {
-        books.add(BookModels.fromJson(item));
+        books.add(BooksModel.fromJson(item));
       }
 
       return Right(books);
@@ -33,15 +33,15 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModels>>> fetchFeaturedBooks() async {
+  Future<Either<Failure, List<BooksModel>>> fetchFeaturedBooks() async {
     try {
       var data = await apiService.get(
           endPoint: 'volumes?Filtering=free-ebooks&q=subject:programming');
 
-      List<BookModels> books = [];
+      List<BooksModel> books = [];
 
       for (var item in data['items']) {
-        books.add(BookModels.fromJson(item));
+        books.add(BooksModel.fromJson(item));
       }
 
       return Right(books);
@@ -55,16 +55,17 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failure, List<BookModels>>> fetchSimilarBooks() async {
+  Future<Either<Failure, List<BooksModel>>> fetchSimilarBooks(
+      {required String category}) async {
     try {
       var data = await apiService.get(
           endPoint:
-              'volumes?Filtering=free-ebooks&Sorting=relavence&q=subject:programming');
+              'volumes?Filtering=free-ebooks&Sorting=relevance&q=subject:programming');
 
-      List<BookModels> books = [];
+      List<BooksModel> books = [];
 
       for (var item in data['items']) {
-        books.add(BookModels.fromJson(item));
+        books.add(BooksModel.fromJson(item));
       }
 
       return Right(books);

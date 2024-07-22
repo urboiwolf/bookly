@@ -12,7 +12,7 @@ final class NewestInitial extends NewestState {}
 final class NewsCubitLoading extends NewestState {}
 
 final class NewsCubitSuccess extends NewestState {
-  final List<BookModels> books;
+  final List<BooksModel> books;
   const NewsCubitSuccess(this.books);
 }
 

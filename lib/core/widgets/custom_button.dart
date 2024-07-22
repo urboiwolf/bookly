@@ -8,12 +8,14 @@ class CustomButtonAction extends StatelessWidget {
       required this.text,
       required this.color,
       required this.backGroundColor,
-      this.fontWeight});
+      this.fontWeight,
+      this.ontap});
   final BorderRadius borderRadius;
   final String text;
   final Color color;
   final Color backGroundColor;
   final FontWeight? fontWeight;
+  final void Function()? ontap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +24,7 @@ class CustomButtonAction extends StatelessWidget {
         color: backGroundColor,
       ),
       child: TextButton(
-          onPressed: () {},
+          onPressed: ontap,
           child: Text(
             text,
             style: Styles.textStyle20

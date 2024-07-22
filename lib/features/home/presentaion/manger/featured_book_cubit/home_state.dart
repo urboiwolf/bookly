@@ -12,7 +12,7 @@ final class HomeCubitInitial extends HomeState {}
 final class HomeCubitLoading extends HomeState {}
 
 final class HomeCubitSuccess extends HomeState {
-  final List<BookModels> books;
+  final List<BooksModel> books;
   const HomeCubitSuccess(this.books);
 }
 

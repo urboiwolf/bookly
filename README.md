@@ -1,16 +1,13 @@
 # bookly_app
 
-A new Flutter project.
+Splash Screen
 
-## Getting Started
+![Screenshot_1721648705](https://github.com/user-attachments/assets/dc4b8804-d50c-48fb-8fbd-64389e2bee3c)
 
-This project is a starting point for a Flutter application.
+Home Screen
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot_1721646413](https://github.com/user-attachments/assets/97a7d7b6-6ca6-4128-8c4d-effb00037039)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+book Details Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1721646443](https://github.com/user-attachments/assets/f9e4d971-d6b0-49b5-85a1-809acb9210ff)
